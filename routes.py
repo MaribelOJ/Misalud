@@ -17,7 +17,7 @@ db.create_all()
 db.session.commit()
 
 
-@app.route('/')
+@app.route('/welcome')
 def front_page():
     return render_template("home.html")
 
