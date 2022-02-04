@@ -17,9 +17,17 @@ db.create_all()
 db.session.commit()
 
 
-@app.route('/welcome')
+@app.route('/')
 def front_page():
     return render_template("home.html")
+
+@app.route('/useraccount', methods=['POST'])
+def userOptions():
+    if (request.form["user"] == 'Patient'):
+        return redirect(url_for('patientAccount'))
+    if (request.form["user"] == 'Functionary'):
+        return redirect(url_for('functionaryAccount'))
+
 
 @app.route('/patientLogIn')
 def patientAccount():
@@ -28,13 +36,6 @@ def patientAccount():
 @app.route('/functionaryLogIn')
 def functionaryAccount():
     return render_template("loginfunctionary.html") 
-
-@app.route('/useraccount', methods=['GET', 'POST'])
-def userOptions():
-    if (request.form["user"] == 'Patient'):
-        return redirect(url_for('patientAccount'))
-    if (request.form["user"] == 'Functionary'):
-        return redirect(url_for('functionaryAccount'))
 
 
 @app.route('/signup', methods=['GET','POST'])
