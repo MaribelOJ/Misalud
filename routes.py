@@ -4,9 +4,9 @@ from flask import Flask, request, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:root@localhost:5432/misaluddb"
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.secret_key = 'some-secret-key'
+#app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:root@localhost:5432/misaluddb"
+#app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+#app.secret_key = 'some-secret-key'
 
 db = SQLAlchemy(app)
 
@@ -118,5 +118,8 @@ def accountP(nombre):
 def accountF(nombre):
     return render_template("functionaryhome.html", nombre = nombre)
 
+
+if __name__ == "__main__":
+    app.run()
 
 
