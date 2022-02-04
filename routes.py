@@ -86,8 +86,6 @@ def loginP():
 
     emails = patient.query.filter(patient.email == email)
     passwords = patient.query.filter(patient.password == password)
-    #user = patient.query.filter(patient.email == email, patient.password == password)
-    #user = patient.query.filter(patient.email == email).first()
 
     try:
         if (emails[0] is not None and passwords[0] is not None):
