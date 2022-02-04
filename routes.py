@@ -1,5 +1,4 @@
 from asyncio.windows_events import NULL
-from cgitb import text
 from flask import Flask, request, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)

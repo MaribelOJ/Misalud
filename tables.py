@@ -1,4 +1,3 @@
-from this import s
 from routes import db
 
 class patient(db.Model):
