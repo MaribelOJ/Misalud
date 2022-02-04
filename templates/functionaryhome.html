@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {box-sizing: border-box}
+
+        /* Set height of body and the document to 100% */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial;
+        }
+
+        /* Style tab links */
+        .tablink {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 20%;
+        }
+
+        .disabled {
+            height: 49px;
+        }
+
+        .nameTab{
+            background-color: orange
+        }
+
+        .tablink:hover {
+            background-color: #777;
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+        }
+
+        #Home {background-color: rgb(230, 199, 199);}
+        #Appointments {background-color: rgb(109, 134, 109);}
+        #Medicine {background-color: rgb(164, 164, 201);}
+        #nombre {background-color: rgb(223, 188, 124);}
+       
+
+
+    </style>
+</head>
+<body>
+    <button class="tablink" onclick="openPage('Home', this, 'rgb(230, 199, 199)')"  id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('Appointments', this, 'rgb(109, 134, 109)')">Appointments</button>
+    <button class="tablink" onclick="openPage('Medicine', this, 'rgb(164, 164, 201)')">Medicine inventory </button>
+    <button class="tablink disabled" onclick="openPage('nothing ', this, 'rgb(164, 164, 201)')" disabled> </button>
+    <button class="tablink nameTab" style="float:right" onclick="openPage('nombre', this, 'rgb(223, 188, 124)')">{{nombre}}</button>
+
+    <div id="Home" class="tabcontent">
+        <h3></h3>
+        <p></p>
+    </div>
+
+    <div id="Appointments" class="tabcontent">
+        <h3></h3>
+        <p></p> 
+    </div>
+
+    <div id="Medicine" class="tabcontent">
+        <h3></h3>
+        <p></p>
+    </div>
+
+    <div id="nombre" class="tabcontent">
+        <h3></h3>
+        <p></p>
+    </div>
+    <script>
+        function openPage(pageName,elmnt,color) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+          }
+          document.getElementById(pageName).style.display = "block";
+          elmnt.style.backgroundColor = color;
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script> 
+    
+</body>
+</html>

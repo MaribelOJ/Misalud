@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY healthcare</title>
+    <style>
+        body {
+            background-image: url("https://st2.depositphotos.com/3470617/6425/v/950/depositphotos_64252163-stock-illustration-medical-icons-seamless-pattern.jpg");
+            background-size: auto;  
+            font-size: 40px; 
+            text-align: center;
+            font-family: "Courier New";
+            padding: 70px 30px 70px 30px;
+        }
+
+        h1 {
+
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+            font-size: 60px;  
+            padding: 50px 30px 50px 80px;
+             
+        }
+        
+
+        .padding {
+            background-color: lightblue; 
+    
+        }
+
+        .btn-group .button {
+            display: inline-block;
+            background-color: blue;
+            font-size: 20px;
+            color:white;
+            text-align: center;
+            margin-top: 20px;  
+            padding: 15px 150px;
+            border-right: none;
+            border-top: none;
+            border-bottom: none;
+        }
+        
+       .btn-group .button:not(:last-child) {
+           position: relative;
+           left: 20px;
+        } 
+
+        .btn-group .button:last-child {
+            position: relative;
+            right: 20px;
+            border-left: 1px solid black;
+
+        }  
+
+
+    </style>
+</head>
+<body>
+    <h1 class= "padding" >My health care</h1>
+    <form action="{{url_for('userOptions')}}" method="POST">
+        <p1 class= "padding"> Please choose one of the options below: </p1>
+        <div>
+            <div class="btn-group">
+                <button type="submit" class="button" name="user" value="Patient">Patient</button>
+                <button type="submit" class="button" name="user" value="Functionary" >Functionary</button>
+            </div>
+
+            <!-- <input type="submit" name="user" value="Patient">
+            <input type="submit" name="user" onclick="alert('Have you been assigned an id and a password?')" value="Functionary"> -->
+        </div>
+    </form>
+        
+</body>
+</html>
