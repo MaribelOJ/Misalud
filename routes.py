@@ -19,6 +19,10 @@ db.session.commit()
 
 @app.route('/')
 def front_page():
+    return "this works"
+
+@app.route('/welcome')
+def front_page():
     return render_template("home.html")
 
 @app.route('/useraccount', methods=['POST'])
