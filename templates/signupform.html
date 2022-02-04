@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiSalud</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .box{
+            width: 520%;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <H1>Sign Up</H1>
+    <form class = "form-inline" action = "{{url_for('signUp')}}" method="POST">
+        <p>
+            <div class = "form-group">
+                <label for="fullName">Full name:</label><br>
+                <input type="text" name="fullName">
+            </div>
+            <div class = "form-group">
+                <label for="identification">Identification:</label><br>
+                <input type="text" name="identification">
+            </div>
+        </p>  
+        <p>     
+            <div class = "form-group" >
+                <label for="phone">Phone number:</label><br>
+                <input type="text" name="phone">
+            </div>
+            <div class = "form-group">
+                <label for="age">Age:</label><br>
+                <input type="text" name="age">
+            </div>
+        </p> 
+        <p>     
+            <div class = "form-group" >
+                <label for="birthdate">Date of birth:</label><br>
+                <input type="text" name="birthdate">
+            </div>
+            <div class = "form-group">
+                <label for="blood_type">Blood type:</label><br>
+                <input type="text" name="blood_type">
+            </div>
+        </p> 
+        <p>     
+            <div class = "form-group" >
+                <label for="department">Department:</label><br>
+                <input type="text" name="department">
+            </div>
+            <div class = "form-group">
+                <label for="district">District:</label><br>
+                <input type="text" name="district">
+            </div>
+        </p>
+        <p>
+            <div class = "form-group" >
+                <label for="status">Status:</label><br>
+                <select class = "box" id="status" name="status">
+                    <option value=" "> </option>
+                    <option value="1 y 2">1 - 2</option>
+                    <option value="3 y 4">3 - 4</option>
+                    <option value="5 y 6">5 - 6</option>
+                </select>
+            </div>
+
+        </p> 
+        <p>     
+            <div class = "form-group" >
+                <label for="email">Email:</label><br>
+                <input type="text" name="email">
+            </div>
+            <div class = "form-group">
+                <label for="password">Password:</label><br>
+                <input type="text" name="password">
+            </div>
+        </p> 
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>    
+</body>
+</html>

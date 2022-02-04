@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("https://t3.ftcdn.net/jpg/02/58/32/94/360_F_258329401_MCy6WUBkklTARuBbYRwENqDYE9ssYrZk.jpg");
+            background-size: 1500px 800px;
+            background-repeat: no-repeat;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+            font-size: 60px;
+            text-align: center;         
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Log in</h1>
+    <form action="{{url_for('loginF')}}" method="POST">
+        <p1>Enter the required information</p1>
+        <div>
+
+            <label for="id">User id:</label><br>
+            <input type="text" name="id"><br>
+            <label for="password">Password:</label><br>
+            <input type="text" name="password" ><br><br>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    
+</body>
+</html>
